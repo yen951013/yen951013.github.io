@@ -1,0 +1,30 @@
+:root {
+    --speed: 0.4s;
+    --width: 78px;
+}
+#Display {
+    position: relative;
+}
+
+.block {
+    width: var(--width);
+    margin: 0 1px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    background-color: #33c1ff;
+    transition: var(--speed) left ease;
+}
+
+.value {
+    width: 100%;
+
+    position: absolute;
+    top: -20px;
+    
+    font-size: 1.5em;
+    color: rgb(248, 98, 236);
+    text-align: center;
+}

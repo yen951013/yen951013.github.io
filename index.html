@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/animation.css">
+</head>
+
+<body>
+    <div id="Container">
+        <h1 id="Title">Bubble Sort</h1>
+        <div id="Animation">
+            <div id="Display">
+            
+            </div>
+        </div>
+        <div id="Settings">
+            <div class="Panel" id="Panel-1">
+                <div id="Setting-Algo">
+                    <label for="SortAlgorithm">Algorithm: </label>
+                    <select name="SortAlgorithm" id="SortAlgorithm">
+                        <option value="0">Bubble Sort</option>
+                        <option value="1">Insertion Sort</option>
+                        <option value="2">Selection Sort</option> 
+                    </select>
+                </div>
+                <div id="Setting-Delay">
+                    <label for="SortAlgorithm">Delay(ms): </label>
+                    <input id="delay" type="range" min="1" max="400" value="400">
+                </div>
+            </div>
+            <div class="Panel" id="Panel-2">
+                <button id="togglePlay" class="btn">
+                    <img src="./icon/play.svg" width="48" height="48" alt="...">
+                </button>
+            </div>
+            <div class="Panel" id="Panel-3">
+                <textarea id="data">[100,90,80,70,60,50,40,30,20,10]</textarea>
+                <div id="dataPanel">
+                    <label for="size">Size</label>
+                    <input id="size" type="text" value="10">
+                    <button id="Random">Random</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var config = {
+            nums: [],
+            sortMethodNumber: 0,
+            size: 20,
+            isPaused: true,
+            isAborted: false,
+            complete: true,
+            delay: 400
+        };
+    </script>
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
